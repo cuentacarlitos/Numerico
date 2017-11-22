@@ -59,7 +59,7 @@ def read_archive():
 			newInfo=Info(mag,tec,year,mes,daysList)
 			already=False
 			for w in stationList:
-				if(est==w.number & mag != '08'):
+				if((est==w.number) & (mag != '08')):
 					already=True
 					w.info.append(newInfo)
 			if not(already):
